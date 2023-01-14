@@ -79,16 +79,16 @@
                         </configuration>
                         <phase>generate-resources</phase>
                     </execution>
-                    <execution>
-                        <id>npm-run-export</id>
-                        <goals>
-                            <goal>npm</goal>
-                        </goals>
-                        <configuration>
-                            <arguments>run start</arguments>
-                        </configuration>
-                        <phase>generate-resources</phase>
-                    </execution>
+<!--                    <execution>-->
+<!--                        <id>npm-run-export</id>-->
+<!--                        <goals>-->
+<!--                            <goal>npm</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <arguments>run start</arguments>-->
+<!--                        </configuration>-->
+<!--                        <phase>generate-resources</phase>-->
+<!--                    </execution>-->
                 </executions>
                 <configuration>
                     <nodeVersion>v17.9.0</nodeVersion>
