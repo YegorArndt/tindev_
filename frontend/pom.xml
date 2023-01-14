@@ -70,12 +70,22 @@
                         <phase>generate-resources</phase>
                     </execution>
                     <execution>
-                        <id>npm-run-export</id>
+                        <id>npm-build</id>
                         <goals>
                             <goal>npm</goal>
                         </goals>
                         <configuration>
                             <arguments>run build</arguments>
+                        </configuration>
+                        <phase>generate-resources</phase>
+                    </execution>
+                    <execution>
+                        <id>npm-run-export</id>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+                        <configuration>
+                            <arguments>run start</arguments>
                         </configuration>
                         <phase>generate-resources</phase>
                     </execution>
