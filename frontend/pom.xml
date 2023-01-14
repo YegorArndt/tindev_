@@ -75,7 +75,7 @@
                             <goal>npm</goal>
                         </goals>
                         <configuration>
-                            <arguments>run export</arguments>
+                            <arguments>run build</arguments>
                         </configuration>
                         <phase>generate-resources</phase>
                     </execution>
