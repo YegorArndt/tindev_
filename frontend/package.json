@@ -6,8 +6,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p $PORT",
+    "start": "node index.js",
     "lint": "next lint"
+  },
+  "engines": {
+    "node": "12.x"
   },
   "dependencies": {
     "@next/font": "13.1.1",
