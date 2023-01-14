@@ -1,2 +1,2 @@
 web: mvn spring-boot:run
-web: npm run start:prod
+web: npm run start
