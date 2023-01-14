@@ -6,11 +6,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "node index.js",
+    "start": "next start -p $PORT",
+    "heroku-postbuild": "npm run build",
     "lint": "next lint"
-  },
-  "engines": {
-    "node": "12.x"
   },
   "dependencies": {
     "@next/font": "13.1.1",
