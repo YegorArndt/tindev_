@@ -1,1 +1,1 @@
-web: java -jar backend/target/*.jar && cd frontend && npm install && npm run build && npm start $PORT
+web: java -jar backend/target/*.jar && cd frontend && npm install && npm run build && npm start
