@@ -10,10 +10,19 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>frontend</artifactId>
+    <properties>
+        <java.version>1.8</java.version>
+        <frontend-src-dir>${project.basedir}</frontend-src-dir>
+        <node.version>v14.15.4</node.version>
+        <yarn.version>v1.16.0</yarn.version>
+        <frontend-maven-plugin.version>1.7.6</frontend-maven-plugin.version>
+    </properties>
 
     <build>
+
         <plugins>
             <plugin>
+
                 <artifactId>maven-clean-plugin</artifactId>
                 <version>${maven-clean-plugin.version}</version>
                 <configuration>
@@ -79,22 +88,46 @@
                         </configuration>
                         <phase>generate-resources</phase>
                     </execution>
-<!--                    <execution>-->
-<!--                        <id>npm-run-export</id>-->
-<!--                        <goals>-->
-<!--                            <goal>npm</goal>-->
-<!--                        </goals>-->
-<!--                        <configuration>-->
-<!--                            <arguments>run start</arguments>-->
-<!--                        </configuration>-->
-<!--                        <phase>generate-resources</phase>-->
-<!--                    </execution>-->
+                    <!--                    <execution>-->
+                    <!--                        <id>npm-run-export</id>-->
+                    <!--                        <goals>-->
+                    <!--                            <goal>npm</goal>-->
+                    <!--                        </goals>-->
+                    <!--                        <configuration>-->
+                    <!--                            <arguments>run start</arguments>-->
+                    <!--                        </configuration>-->
+                    <!--                        <phase>generate-resources</phase>-->
+                    <!--                    </execution>-->
                 </executions>
                 <configuration>
+                    <workingDirectory>${frontend-src-dir}</workingDirectory>
                     <nodeVersion>v17.9.0</nodeVersion>
                 </configuration>
             </plugin>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.2.0</version>
+                <executions>
+                    <execution>
+                        <id>copy-resources</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <encoding>UTF-8</encoding>
+                            <outputDirectory>${backend-src-dir}/static
+                            </outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${frontend-src-dir}/.next</directory>
+                                    <filtering>false</filtering>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
-
 </project>
