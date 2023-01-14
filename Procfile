@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT $JAVA_OPTS -jar target/tinDev-0.0.1-SNAPSHOT.jar
+web: java -jar backend/target/*.jar && cd frontend && npm install && npm run build && npm start -p $PORT
