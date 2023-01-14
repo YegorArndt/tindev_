@@ -1,1 +1,2 @@
-web: cd frontend && npm i --legacy-peer-deps && npm run build && npm start
+web: mvn spring-boot:run
+web: npm run start:prod

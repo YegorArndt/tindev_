@@ -21,10 +21,10 @@ public class VacancyController {
     public Vacancy createVacancy(@RequestBody Vacancy vacancy) {
         return vacancyServiceImpl.createVacancy(vacancy);
     }
-    @GetMapping("/vacancies/{id}")
-    public Vacancy getVacancy(@PathVariable int id) {
-        return vacancyServiceImpl.getVacancy(id);
-    }
+//    @GetMapping("/vacancies/{id}")
+//    public Vacancy getVacancy(@PathVariable int id) {
+//        return vacancyServiceImpl.getVacancy(id);
+//    }
 
     @GetMapping("/vacancies")
     public List<Vacancy> getAllVacancies() {
