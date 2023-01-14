@@ -2,7 +2,7 @@
   "name": "tindev",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://127.0.0.1:localhost:8888",
+  "proxy": "http://localhost:8888",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
