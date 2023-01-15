@@ -6,4 +6,4 @@ build:
   docker:
     web: ./backend/Dockerfile
 run:
-  web: mvn spring-boot:run
+  web: ./backend ./mvnw clean install
