@@ -4,6 +4,6 @@ setup:
       as: DATABASE
 build:
   docker:
-    web: backend/Docker
+    web: . /backend/Dockerfile
 run:
   web: mvn spring-boot:run
