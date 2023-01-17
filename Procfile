@@ -1,1 +1,1 @@
-web: mvn clean package && java -Dserver.port=$PORT $JAVA_OPTS -jar target/*.jar & NODE_PATH=frontend npm run start
+web:NODE_PATH=frontend && mvn clean package && java -Dserver.port=$PORT $JAVA_OPTS -jar target/*.jar npm run start
