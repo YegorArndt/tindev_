@@ -1,1 +1,1 @@
-web: cd backend && java -Dserver.port=$PORT -jar target/backend-0.0.1-SNAPSHOT.jar && cd .. && cd frontend && npm install && npm run start && cd .. && cd backend && java -Dserver.port=$PORT $JAVA_OPTS -jar target/*.jar
+web: cd frontend && npm install && npm run start && cd .. && cd backend && java -Dserver.port=$PORT $JAVA_OPTS -jar target/*.jar
