@@ -1,1 +1,1 @@
-web: cd backend && mvn clean package && cd .. && cd frontend && npm install && npm run start && cd .. && cd backend && java -Dserver.port=$PORT $JAVA_OPTS -jar target/*.jar
+web: cd backend && mvn -B -DskipTests clean dependency:list install && cd .. && cd frontend && npm install && npm run start && cd .. && cd backend && java -Dserver.port=$PORT $JAVA_OPTS -jar target/*.jar
