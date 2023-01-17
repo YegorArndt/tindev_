@@ -1,2 +1,4 @@
 postgres
 root
+
+docker build -t tin-dev https://github.com/YegorArndt/tindev_.git
