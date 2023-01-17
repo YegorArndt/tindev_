@@ -1,1 +1,1 @@
-web: cd frontend && npm install && npm run start && cd .. && cd backend && java -Dserver.port=$PORT $JAVA_OPTS -jar target/*.jar
+web: cd frontend && npm install && nvm use 16.8.0 && npm run start && cd .. && cd backend && java -Dserver.port=$PORT $JAVA_OPTS -jar target/*.jar
